@@ -1,0 +1,6 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem 0 0.8rem;
+  box-sizing: border-box;
+}
