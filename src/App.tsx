@@ -1,36 +1,34 @@
-import { Container } from '@mui/system';
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Container } from '@mui/system';
 import Header from './components/Header/Header';
-import Search from './components/Search/Search';
-import OneCard from './components/OneCard/OneCard';
-import { Grid } from '@mui/material';
-import {imagesArray} from "./utils/utils";
+import Sidebar from './components/Sidebar/Sidebar';
+import Footer from './components/Footer/Footer';
+import All from './pages/All/All';
+import AboutBrand from './pages/AboutBrand/AboutBrand';
+import "./App.css";
 
 function App() {
-  const Cards = imagesArray.map(item => <OneCard img={item}/>)
+
   return (
     <>
       <Header />
-      <Container>
-        <Search />
-        <Grid container 
-          spacing={2}
-          direction="row"
-          justifyContent="center"
-          alignItems="flex-start"
-        >
-          {Cards}
-          {/* <OneCard />
-          <OneCard />
-          <OneCard />
-          <OneCard />
-          <OneCard />
-          <OneCard />
-          <OneCard /> */}
-        </Grid>
+      <div className='container-sidebar-page'>
+        <Sidebar />
+        <Container>
+          <Routes>
+            <Route path="/" element={ <All />}/>
+            {/* <Route path="/new" element={ <All />}/> */}
+            {/* <Route path="/promotion" element={ <All />}/> */}
+            {/* <Route path="/delivery-and-payment" element={ <All />}/> */}
+            <Route path="/about-brand" element={ <AboutBrand />}/>
+            {/* <Route path="/contscts" element={ <All />}/> */}
 
+          </Routes>
+        </Container>
+      </div>
 
-      </Container>
+      {/* <Footer /> */}
     </>
   );
 }

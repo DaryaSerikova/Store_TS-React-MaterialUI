@@ -1,12 +1,19 @@
 import * as React from 'react';
 import { AppBar, Box, Toolbar, Typography, Button, IconButton, ButtonGroup } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { HeaderItems } from './HeaderInfo';
+import { HeaderItems, HeaderItems2 } from './HeaderInfo';
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
 
-  const Buttons = HeaderItems.map( item => <Button>{item}</Button>);
+  const Buttons = HeaderItems2.map( item => 
+  // <Button>{item}</Button>
+    <Link to={item.link}>
+      <Button>{item.title}</Button>
+    </Link>
+
+  );
 
   return (
     <Box sx={{ flexGrow: 1 }}>

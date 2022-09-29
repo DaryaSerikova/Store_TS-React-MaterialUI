@@ -39,3 +39,26 @@
 .parent {
   position: relative;
 }
+
+.selected {
+  opacity: 1;
+  /* color: #c4c4c4 !important; */
+  color: #d7d7d7 !important;
+
+  /* #d7d7d7; */
+  /* color: rgb(252, 61, 61) !important; */
+
+}
+
+.favorite-focus :hover {
+  opacity: 1;
+  color: #c4c4c4;
+}
+
+.favorite-icon {
+  color: #f8f7f75e;
+}
+
+.header {
+  padding: 0.7rem 0.9rem;
+}

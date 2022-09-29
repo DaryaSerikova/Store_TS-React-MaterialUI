@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { useState, MouseEvent } from 'react';
 import { styled } from '@mui/material/styles';
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, Typography } from '@mui/material';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, Typography, Grid } from '@mui/material';
 
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import { red } from '@mui/material/colors';
@@ -8,11 +8,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { firstImgLink, secondImgLink } from '../../utils/utils';
-import "./OneCard.css";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
-import { Grid } from '@mui/material';
+import "./OneCard.css";
 
 
 
@@ -32,8 +30,25 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function OneCard({img: string}) {
-  const [expanded, setExpanded] = React.useState(false);
+type OneCardProps = {
+  img: string
+}
+
+// const OneCard: React.FC<{img: string}> = ({img}) => {
+const OneCard = ({img}: OneCardProps ) => {
+
+  const [expanded, setExpanded] = useState(false);
+  const [favorite, setFavorite] = useState<boolean>(false);
+
+
+  const onClickToFavorite = (event: MouseEvent<SVGSVGElement, globalThis.MouseEvent>) => {
+    console.log('Favorite');
+    let currentFavorite = favorite;
+
+    console.log("currentFavorite, ", currentFavorite);
+    setFavorite(!currentFavorite);
+  }
+
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -46,15 +61,13 @@ export default function OneCard({img: string}) {
           sx={{background: "linear-gradient(to top, #00000000, #000000a8)"}}
           action={
             <IconButton aria-label="add to favorites">
-              <FavoriteIcon sx={{color: "#f8f7f75e"}}/>
-              {/* <FavoriteBorderIcon /> */}
-              {/* <FavoriteTwoToneIcon 
-                sx={{    color: "#eaeaea"}}
-              /> */}
-
+              <FavoriteIcon 
+                className={`favorite-icon favorite-focus ${favorite ? "selected" : ""}`} 
+                onClick={onClickToFavorite}
+              />
             </IconButton>
           }
-          className = "child"
+          className = "child header"
         />
 
         <CardMedia
@@ -62,13 +75,14 @@ export default function OneCard({img: string}) {
           // height="194"
           height="330"
           image={img}
-          // image={secondImgLink}
           alt="Paella dish"
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            This impressive paella is a perfect party dish and a fun meal to cook
-            together with your guests.
+            {/* This impressive paella is a perfect party dish and a fun meal to cook
+            together with your guests. */}
+            This impressive paella
+            {/* Price: 12 */}
           </Typography>
         </CardContent>
         {/* <CardActions disableSpacing> */}
@@ -91,3 +105,5 @@ export default function OneCard({img: string}) {
     </Grid>
   );
 }
+
+export default OneCard;
