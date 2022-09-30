@@ -1,0 +1,23 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-paper {
+  max-width: 320px;
+  padding: 3rem 1.5rem 2.5rem;
+}
+
+.login-input {
+  margin: 0.5rem 0 !important;
+}
+
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  align-items: center;
+  padding-top: 3rem;
+}

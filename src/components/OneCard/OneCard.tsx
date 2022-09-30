@@ -1,6 +1,6 @@
 import React, { useState, MouseEvent } from 'react';
-import { styled } from '@mui/material/styles';
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, Typography, Grid } from '@mui/material';
+// import { styled } from '@mui/material/styles';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, Typography, Grid, styled } from '@mui/material';
 
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import { red } from '@mui/material/colors';
@@ -32,10 +32,13 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 type OneCardProps = {
   img: string
+  // price: number
 }
 
 // const OneCard: React.FC<{img: string}> = ({img}) => {
-const OneCard = ({img}: OneCardProps ) => {
+const OneCard = ({img, 
+  // price
+}: OneCardProps ) => {
 
   const [expanded, setExpanded] = useState(false);
   const [favorite, setFavorite] = useState<boolean>(false);
@@ -82,9 +85,12 @@ const OneCard = ({img}: OneCardProps ) => {
             {/* This impressive paella is a perfect party dish and a fun meal to cook
             together with your guests. */}
             This impressive paella
-            {/* Price: 12 */}
+            {/* <div>Price: {price}</div> */}
           </Typography>
         </CardContent>
+
+
+
         {/* <CardActions disableSpacing> */}
           {/* <IconButton aria-label="add to favorites">
             <FavoriteIcon />

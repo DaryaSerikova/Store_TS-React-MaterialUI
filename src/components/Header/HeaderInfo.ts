@@ -12,6 +12,7 @@ export const HeaderItems2 = [
   {title: "New", link: "/"},
   {title: "Promotion", link: "/"},
   {title: "Delivery and Payment", link: "/"},
+  {title: "Table size", link: "/table-size"},
   {title: "About the brand", link: "/about-brand"},
   {title: "Contacts", link: "/"},
 ]

@@ -9,8 +9,8 @@ export default function Header() {
 
   const Buttons = HeaderItems2.map( item => 
   // <Button>{item}</Button>
-    <Link to={item.link}>
-      <Button>{item.title}</Button>
+    <Link to={item.link} style={{textDecoration: "none"}}>
+      <Button sx={{ fontSize: "13pt" }}>{item.title}</Button>
     </Link>
 
   );
@@ -30,11 +30,13 @@ export default function Header() {
           </IconButton> */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Store
-            <ButtonGroup variant="text" aria-label="text button group" sx={{ml: "1rem"}}>
+            <ButtonGroup variant="text" aria-label="text button group" sx={{ ml: "2rem" }}>
               {Buttons}
             </ButtonGroup>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Link to="/login">
+            <Button color="inherit">Login</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>

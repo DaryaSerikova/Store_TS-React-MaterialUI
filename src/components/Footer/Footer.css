@@ -1,0 +1,13 @@
+.footer-low {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer-wrapper {
+  margin-top: 4rem;
+  padding: 1rem;
+  background-color: #e8e8e8;
+  flex-shrink: 0;
+}
