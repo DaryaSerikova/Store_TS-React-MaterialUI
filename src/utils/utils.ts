@@ -1,6 +1,3 @@
-export const firstImgLink = "https://images.unsplash.com/photo-1664268336138-388b6e0b9366?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
-export const secondImgLink = "https://images.unsplash.com/photo-1664219389029-7015921b5557?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
-
 export const imagesArray = [
   "https://images.unsplash.com/photo-1664421182297-568427dda2ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
   "https://images.unsplash.com/photo-1664241457710-47cabbcc3447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
@@ -29,3 +26,5 @@ export const imagesArray = [
   "https://images.unsplash.com/photo-1664381370841-f11cf2eda744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
   "https://images.unsplash.com/photo-1664360340328-5b0e78f0a01e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
 ]
+
+export const rvrfr = []
