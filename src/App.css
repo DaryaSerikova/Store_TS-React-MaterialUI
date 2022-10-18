@@ -5,4 +5,13 @@
 
 .main {
   flex-grow: 1;
+  /* font-family: 'Poiret One', cursive; */
+  /* font-family: 'Alegreya SC', serif; */
+  font-family: 'Cormorant Unicase', serif;
+  /* font-family: 'Playfair Display SC', serif; */
+  /* font-family: 'Poiret One', cursive; */
+}
+
+.scroll {
+  overflow-y: scroll;
 }
